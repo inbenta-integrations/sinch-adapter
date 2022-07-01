@@ -8,10 +8,6 @@
     * [Middleware](#middleware)
     * [Sinch Adapter](#sinch-adapter)
     * [Inbenta Backstage Instance](#inbenta-backstage-instance)
-* [Agents Availability](#agents-availability)
-* [Sinch Ticket Creation](#sinch-ticket-creation)
-    * [Middleware Configuration](#middleware-configuration)
-    * [Backstage Configuration](#backstage-configuration)
 * [Example](#example)
 * [Dependencies](#dependencies)
  
