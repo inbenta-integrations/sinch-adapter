@@ -1,0 +1,13 @@
+{
+    "require": {
+        "php": "^7.3",
+        "guzzlehttp/guzzle": "^7.4",
+        "vlucas/phpdotenv": "^5.4",
+        "klein/klein": "^2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/"
+        }
+    }
+}

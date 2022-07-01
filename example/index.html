@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Chatbot Sinch Adapter demo">
+    <title>Chatbot Sinch Adapter demo</title>
+    <link rel="icon" href="https://www.inbenta.com/favicon.ico" type="image/x-icon">
+    <script type="text/javascript" src="https://sdk.inbenta.io/chatbot/1.69.2/inbenta-chatbot-sdk.js" integrity="sha384-eojfXgvqJo/H4CitXplSAH9IcFJbpSBVUVU69J8hUuGog0A9XRCZNhkYS2YXSdh3" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="../src/sinch_adapter.js"></script>
+    <!-- Html page styles -->
+    <style>
+        .inb-demo,.inb-demo__button,.inb-demo__title{margin:0}.inb-demo *{box-sizing:border-box}.inb-demo :focus{outline:transparent 0}.inb-demo__ul{list-style:none;margin:0;padding:0}.inb-demo__main{padding:16px}.inb-demo__main__content{max-width:1000px;margin:0 auto;font-family:helvetica,sans-serif}.inb-demo__header{font-weight:700;font-size:16px;text-align:right;color:#04221d;background-color:#e6e6e6;border-bottom:1px solid #d8d8d8;padding:17px}.inb-demo__header__title{display:flex;align-items:center;justify-content:space-between;max-width:1000px;margin:0 auto}.inb-demo__header__title a{height:22px}.inb-demo__header__image{width:72px}.inb-demo__title{margin-top:40px;margin-bottom:24px;font-size:24px}.inb-demo__button{display:flex;align-items:center;justify-content:flex-start;min-height:30px;position:relative;padding-left:24px;text-decoration:none;color:#333;margin-bottom:6px;transition:.2s ease-out}.inb-demo__button:hover{color:#f6253a}.inb-demo__button:after,.inb-demo__button:before{position:absolute;left:8px;top:15px;content:"";display:inline-block;background-color:#333;border-radius:4px;width:6px;height:2px;transition:.2s ease-out}.inb-demo__button:before{transform:rotate(45deg);top:11px}.inb-demo__button:after{transform:rotate(-45deg)}.inb-demo__button:hover:after,.inb-demo__button:hover:before{background-color:#f6253a;left:12px}
+    </style>
+</head>
+
+<body class="inb-demo">
+    <header class="inb-demo__header">
+        <div class="inb-demo__header__title">
+            <a href="https://www.inbenta.com" target="_blank"><img class="inb-demo__header__image" src="https://www.inbenta.com/wp-content/themes/inbenta/img/logo-inbenta.svg" alt="Inbenta"></a>
+        </div>
+    </header>
+    <main class="inb-demo__main">
+        <div class="inb-demo__main__content">
+            <h1 class="inb-demo__title">Chatbot Sinch Adapter demo</h1>
+        </div>
+    </main>
+
+    <!-- INBENTA CHATBOT SDK-->
+    <script type="text/javascript">
+        var inbApp = {
+            // Inbenta chatbot SDK credentials
+            sdkAuth: {
+                inbentaKey: '',
+                domainKey: ''
+            },
+            // Inbenta chatbot SDK configuration
+            sdkConfig: {
+                chatbotId: 'sinch_chatbot',
+                environment: 'development',
+                userType: 0,
+                lang: 'en',
+                labels: {
+                    en: {
+                        'interface-title': 'Sinch Adapter'
+                    }
+                },
+                closeButton: {
+                    visible: true
+                },
+                adapters: []
+            }
+        }
+
+        // Add adapters
+        window.inbApp.sdkConfig.adapters.push(
+            inbentaSinchAdapter
+        );
+
+        window.InbentaChatbotSDK.buildWithDomainCredentials(inbApp.sdkAuth, inbApp.sdkConfig);
+    </script>
+</body>
+
+</html>

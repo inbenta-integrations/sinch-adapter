@@ -1,0 +1,15 @@
+SINCH_USER=
+SINCH_PWD=
+
+SINCH_BASE_URL=
+SINCH_AUTH_URI= # Example: /visitor/ecfs/authentication
+SINCH_QUEUE_URL= # Example: /ecfs/RI/rmi/queueStatuses
+SINCH_QUEUE_ADDRESS_URL= # Example: /ecfs/RI/rci/queues
+SINCH_TICKET_URL= # Example: /ri/rti/tasks/
+SINCH_AUTH=
+
+# Same as sinch_adapter.js ('middlewareConf.token' var)
+TOKEN=
+
+# Add white listed domains, separeted by coma
+DOMAINS=
